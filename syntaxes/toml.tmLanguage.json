@@ -1,0 +1,71 @@
+{
+  "scopeName": "source.toml",
+  "name": "TOML",
+  "patterns": [
+    {
+      "name": "comment.line.number-sign.toml",
+      "match": "#.*$"
+    },
+    {
+      "name": "entity.name.section.table.toml",
+      "begin": "^\\s*(\\[\\[?)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.table.toml"
+        }
+      },
+      "end": "(\\]\\]?)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.table.toml"
+        }
+      },
+      "patterns": [
+        {
+          "name": "entity.name.table.toml",
+          "match": "[^\\]]+"
+        }
+      ]
+    },
+    {
+      "name": "meta.key-value.toml",
+      "match": "^\\s*([A-Za-z0-9_\\-\\.]+)\\s*(=)\\s*(.+)$",
+      "captures": {
+        "1": {
+          "name": "variable.other.key.toml"
+        },
+        "2": {
+          "name": "keyword.operator.assignment.toml"
+        },
+        "3": {
+          "name": "meta.value.toml"
+        }
+      }
+    },
+    {
+      "name": "string.quoted.double.toml",
+      "match": "\"([^\"\\\\]|\\\\.)*\""
+    },
+    {
+      "name": "string.quoted.single.toml",
+      "match": "'([^'\\\\]|\\\\.)*'"
+    },
+    {
+      "name": "constant.numeric.toml",
+      "match": "\\b[+-]?(?:0[xX][0-9a-fA-F_]+|0[oO][0-7_]+|0[bB][01_]+|[0-9_]+(?:\\.[0-9_]+)?(?:[eE][+-]?[0-9_]+)?)\\b"
+    },
+    {
+      "name": "constant.language.boolean.toml",
+      "match": "\\b(true|false)\\b"
+    },
+    {
+      "name": "constant.language.datetime.toml",
+      "match": "\\b\\d{4}-\\d{2}-\\d{2}[Tt ]\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:?\\d{2})?\\b"
+    }
+  ],
+  "repository": {},
+  "fileTypes": [
+    "toml"
+  ],
+  "uuid": "b4a3e9f8-0000-0000-0000-000000000000"
+}
