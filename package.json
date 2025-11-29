@@ -3,7 +3,7 @@
   "displayName": "Best TOML",
   "description": "Lightweight TOML syntax highlighting for VS Code – perfect for pyproject.toml, Cargo.toml and other TOML-based configs.",
   "version": "0.0.1",
-  "publisher": "roberth",
+  "publisher": "rherre86 ",
   "license": "MIT",
   "repository": {
     "type": "git",
