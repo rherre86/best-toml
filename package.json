@@ -42,8 +42,7 @@
     "language-configuration.json",
     "syntaxes/**",
     "icon.png",
-    "images/**",
-    ".vscodeignore"
+    "images/**"
   ],
   "contributes": {
     "languages": [
