@@ -1,41 +1,61 @@
 {
   "name": "best-toml",
   "displayName": "Best TOML",
-  "description": "Einfache, moderne TOML-Unterstützung für VS Code: Syntax-Highlighting und Grundkonfiguration.",
+  "description": "Lightweight TOML syntax highlighting for VS Code – perfect for pyproject.toml, Cargo.toml and other TOML-based configs.",
   "version": "0.0.1",
   "publisher": "roberth",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/roberth/best-toml.git"
+    "url": "https://github.com/rherre86/best-toml.git"
   },
-  "homepage": "https://github.com/roberth/best-toml",
+  "homepage": "https://github.com/rherre86/best-toml",
   "bugs": {
-    "url": "https://github.com/roberth/best-toml/issues"
+    "url": "https://github.com/rherre86/best-toml/issues"
   },
   "engines": {
     "vscode": "^1.95.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": [
+    "Programming Languages"
+  ],
   "keywords": [
     "toml",
     "pyproject",
     "config",
-    "syntax highlighting"
+    "syntax highlighting",
+    "cargo",
+    "poetry",
+    "uv"
   ],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "icon": "icon.png",
   "files": [
     "package.json",
     "README.md",
     "LICENSE",
+    "CHANGELOG.md",
+    "MARKETPLACE_DESCRIPTION.md",
     "language-configuration.json",
-    "syntaxes/**"
+    "syntaxes/**",
+    "icon.png",
+    "images/**",
+    ".vscodeignore"
   ],
   "contributes": {
     "languages": [
       {
         "id": "toml",
-        "aliases": ["TOML", "toml"],
-        "extensions": [".toml"],
+        "aliases": [
+          "TOML",
+          "toml"
+        ],
+        "extensions": [
+          ".toml"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
